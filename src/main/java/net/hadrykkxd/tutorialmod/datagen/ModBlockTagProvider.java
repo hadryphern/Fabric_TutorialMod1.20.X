@@ -37,7 +37,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.RAW_RUBY_BLOCK)
                 .add(ModBlocks.NETHER_RUBY_ORE)
-                .add(ModBlocks.END_STONE_RUBY_ORE)
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE);
 
         //Quebrar com picareta de Diamante
@@ -45,5 +44,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         //Quebrar com picareta de Netherite
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")));
+
+        //Quebrar com picareta de Ruby
+        getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_5")))
+                .add(ModBlocks.END_STONE_RUBY_ORE);
+
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ModBlocks.RUBY_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.RUBY_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.RUBY_WALL);
     }
 }

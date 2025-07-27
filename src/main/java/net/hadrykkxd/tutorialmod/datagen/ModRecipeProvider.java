@@ -32,12 +32,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RUBY, RecipeCategory.DECORATIONS,
                 ModBlocks.RUBY_BLOCK);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_RUBY, 1)
                 .pattern("SSS")
                 .pattern("SCS")
                 .pattern("SSS")
                 .input('S', Items.STONE)
-                .input('R', ModItems.RUBY)
+                .input('C', ModItems.RUBY)
                 .criterion(hasItem(Items.STONE), conditionsFromItem(Items.STONE))
                 .criterion(hasItem(ModItems.RUBY), conditionsFromItem(ModItems.RUBY))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.RAW_RUBY)));
